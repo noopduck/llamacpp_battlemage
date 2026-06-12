@@ -22,6 +22,9 @@ setup_oneapi_and_other_reqs.sh
 build_llamacpp_sycl.sh
 
 Choose a model to run or customize your own run script with the model you would like
+Remember to find where your models are installed and update the run_* scripts as needed for your setup
+
+find ~/ -iname "*.gguf"
 
 Have fun <3
 
