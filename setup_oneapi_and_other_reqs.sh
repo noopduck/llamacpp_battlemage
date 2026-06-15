@@ -75,11 +75,16 @@ dnf install -y \
     vulkan-loader
 
 # ── 4. oneAPI toolkit ─────────────────────────────────────────────────────────
+# NOTE: Do NOT install the generic "intel-oneapi-compiler-shared" /
+# "intel-oneapi-compiler-shared-runtime" meta-packages. dnf resolves those
+# to an ancient 2021.1.x build, which every modern dpcpp-cpp-runtime
+# conflicts with, making the whole transaction unsolvable.
+# Pin a specific dpcpp-cpp version instead; it pulls in a matching
+# compiler-shared/runtime automatically.
 info "Installing Intel oneAPI toolkit packages"
 dnf install -y --repo oneAPI \
-    intel-oneapi-compiler-dpcpp-cpp \
-    intel-oneapi-compiler-shared \
-    intel-oneapi-compiler-shared-runtime \
+    intel-oneapi-compiler-dpcpp-cpp-2025.2 \
+    intel-oneapi-compiler-dpcpp-cpp-runtime-2025.2 \
     intel-oneapi-tbb \
     intel-oneapi-tbb-devel \
     intel-oneapi-mkl-core \
