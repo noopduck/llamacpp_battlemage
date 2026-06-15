@@ -21,9 +21,9 @@ At least i can attest that llama build works and runs on the SYCL backend on my 
 setup_oneapi_and_other_reqs.sh
 
 
-git clone https://github.com/ggml-org/llama.cpp.git
+### git clone https://github.com/ggml-org/llama.cpp.git
 
-# copy this into llama.cpp: build_llamacpp_sycl.sh and run it.
+### copy this into llama.cpp: build_llamacpp_sycl.sh and run it.
 
 Choose a model to run or customize your own run script with the model you would like
 Remember to find where your models are installed and update the run_* scripts as needed for your setup
