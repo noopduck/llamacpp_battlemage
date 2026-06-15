@@ -18,8 +18,7 @@ something may not be correct, please create an issue if something fails.
 
 At least i can attest that llama build works and runs on the SYCL backend on my computer.
 
-setup_oneapi_and_other_reqs.sh
-
+### Inside the llamacpp_battlemage dir: ./setup_oneapi_and_other_reqs.sh
 
 ### git clone https://github.com/ggml-org/llama.cpp.git
 
